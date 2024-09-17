@@ -203,8 +203,11 @@ begin
       if (ir_op(ir) = "000") then
          aluOperand2  <= unsigned(regCDataOut);
       elsif (ir_op(ir) = "001") then
-         -- 32-bit zero-extended immediate value from ir
-         aluOperand2  <= unsignedImmediateValue;
+         if (ir_aluOp(ir) = "100") then
+            aluOperand2  <= signedImmediateValue;
+         else
+            aluOperand2  <= unsignedImmediateValue;
+         end if;
       else  
          -- 32-bit sign-extended immediate value from ir
          aluOperand2  <= signedImmediateValue;
