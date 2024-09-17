@@ -147,6 +147,8 @@ begin
       case RegASource is
          when aluOut      => regADataIn <= std_logic_vector(aluDataOut);
          when dataMemOut  => regADataIn <= dataInBus;
+         when reg31       =>  regAAddr <= "11111";
+                              regADataIn <= pc;
       end case;
 
    end process regControl;
