@@ -1,0 +1,6 @@
+src/main.o: ../src/main.cpp ../src/dir.h ../src/symbol.h ../src/main.h \
+ ../src/asm.h
+../src/dir.h:
+../src/symbol.h:
+../src/main.h:
+../src/asm.h:

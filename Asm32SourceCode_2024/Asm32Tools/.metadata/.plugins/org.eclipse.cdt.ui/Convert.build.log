@@ -1,0 +1,15 @@
+22:27:40 **** Build of configuration Debug for project Convert ****
+make all 
+Building file: ../src/Convert.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Convert.d" -MT"src/Convert.o" -o "src/Convert.o" "../src/Convert.cpp"
+Finished building: ../src/Convert.cpp
+ 
+Building target: Convert
+Invoking: GCC C++ Linker
+g++  -o "Convert" ./src/Convert.o   
+Finished building target: Convert
+ 
+
+22:27:40 Build Finished. 0 errors, 0 warnings. (took 108ms)
+

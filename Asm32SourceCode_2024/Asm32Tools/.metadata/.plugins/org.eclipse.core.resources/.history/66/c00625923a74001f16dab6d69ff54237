@@ -1,0 +1,3 @@
+src/exprn.o: ../src/exprn.cpp ../src/exprn.h ../src/symbol.h
+../src/exprn.h:
+../src/symbol.h:

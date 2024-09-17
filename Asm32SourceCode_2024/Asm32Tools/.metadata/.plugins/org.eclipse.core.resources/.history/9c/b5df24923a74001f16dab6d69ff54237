@@ -1,0 +1,2 @@
+src/dir.o: ../src/dir.cpp ../src/dir.h
+../src/dir.h:

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Asm32/codememory2.lst&apos; to &apos;codememory.ref&apos;" description="Rename resource &apos;codememory2.lst&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="codememory2.lst" name="codememory.ref" stamp="1726538162004" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Asm32/codememory.ref&apos; to &apos;codememory.lst_ref&apos;" description="Rename resource &apos;codememory.ref&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="codememory.ref" name="codememory.lst_ref" stamp="1726538169714" updateReferences="true"/>
+</session>

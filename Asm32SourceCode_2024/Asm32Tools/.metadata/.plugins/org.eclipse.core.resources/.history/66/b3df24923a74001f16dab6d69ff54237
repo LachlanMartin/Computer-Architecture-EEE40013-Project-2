@@ -1,0 +1,7 @@
+src/asm.o: ../src/asm.cpp ../src/exprn.h ../src/main.h ../src/symbol.h \
+ ../src/asm.h ../src/opcode.h
+../src/exprn.h:
+../src/main.h:
+../src/symbol.h:
+../src/asm.h:
+../src/opcode.h:

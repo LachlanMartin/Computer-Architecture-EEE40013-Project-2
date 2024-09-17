@@ -1,0 +1,8 @@
+12:04:25 **** Clean-only build of configuration Release for project Asm32 ****
+make clean 
+rm -rf ./src/asm.d ./src/asm.o ./src/dir.d ./src/dir.o ./src/exprn.d ./src/exprn.o ./src/main.d ./src/main.o ./src/opcode.d ./src/opcode.o ./src/symbol.d ./src/symbol.o
+rm -rf Asm32
+ 
+
+12:04:25 Build Finished. 0 errors, 0 warnings. (took 62ms)
+

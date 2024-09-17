@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="true"/>
+		<item key="wholeword" value="true"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="0xE3FFFFFF"/>
+		<list key="findhistory">
+			<item value="0x1FFFFFFF"/>
+			<item value="opcode"/>
+			<item value="Found it"/>
+			<item value="MIN_"/>
+			<item value="MIN_SIGNED-1"/>
+			<item value="MIN_MIN_SIGNED-1"/>
+			<item value="MIN_UNSIGNED-1"/>
+			<item value="-1"/>
+			<item value="0xFFFF8000-1"/>
+			<item value="0-1   "/>
+			<item value="signed"/>
+			<item value="unsigned"/>
+			<item value="0xFFFFFFFF"/>
+			<item value="0x1234"/>
+			<item value="do_REG"/>
+		</list>
+		<list key="replacehistory">
+			<item value="0xE3FFFFFF"/>
+			<item value="entry-&gt;opcode"/>
+			<item value="MAX_"/>
+			<item value="MAX_SIGNED+1"/>
+			<item value="MAXMIN_SIGNED+1"/>
+			<item value="MAX_UNSIGNED+1"/>
+			<item value="MIN_SIGNED-1"/>
+			<item value="MIN_UNSIGNED-1"/>
+			<item value="MIN_UNSIGNED"/>
+			<item value="unsigned [0xFFFF8000..0x7FFF]"/>
+			<item value="unsigned [0..0xFFFF]"/>
+			<item value="0xFFFF"/>
+			<item value="0xFFFFFFFF"/>
+			<item value="-1"/>
+			<item value="(op_entry &amp;)"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1338"/>
+		<item key="DIALOG_Y_ORIGIN" value="228"/>
+		<item key="DIALOG_WIDTH" value="321"/>
+		<item key="DIALOG_HEIGHT" value="371"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|10.0|0|GTK|1|"/>
+	</section>
+</section>

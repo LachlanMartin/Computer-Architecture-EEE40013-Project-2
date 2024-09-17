@@ -1,0 +1,2 @@
+src/opcode.o: ../src/opcode.cpp ../src/opcode.h
+../src/opcode.h:

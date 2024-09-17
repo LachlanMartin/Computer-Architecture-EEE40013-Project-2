@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Public/delme/E2_CPU32Debug/Synthesis/cpuTestbench_isim_beh1.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="cpupackage" />
+            <top_module name="cputestbench" />
+            <top_module name="debug" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_textio" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="43" />
+   <wvobject fp_name="divider20" type="divider">
+      <obj_property name="label">CPU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/loadpc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">loadpc</obj_property>
+      <obj_property name="ObjectShortName">loadpc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/loadir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">loadir</obj_property>
+      <obj_property name="ObjectShortName">loadir</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus69" type="vbus" db_ref_id="1">
+      <obj_property name="label">ir_op</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/cputestbench/theCPU/ir[31]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">ir[31]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/ir[30]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">ir[30]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/ir[29]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[29]</obj_property>
+         <obj_property name="ObjectShortName">ir[29]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus73" type="vbus" db_ref_id="1">
+      <obj_property name="label">ir_aluFunc</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/cputestbench/theCPU/ir[28]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[28]</obj_property>
+         <obj_property name="ObjectShortName">ir[28]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/ir[27]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[27]</obj_property>
+         <obj_property name="ObjectShortName">ir[27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/ir[26]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[26]</obj_property>
+         <obj_property name="ObjectShortName">ir[26]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/ir" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ir[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ir[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/pcsource" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">pcsource</obj_property>
+      <obj_property name="ObjectShortName">pcsource</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/branchoffset" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">branchoffset[31:0]</obj_property>
+      <obj_property name="ObjectShortName">branchoffset[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/addressbus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addressbus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addressbus[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider25" type="divider">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/aluoperand1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluoperand1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluoperand1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/aluoperand2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluoperand2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluoperand2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/aludataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aludataout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aludataout[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/aluop" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluop[2:0]</obj_property>
+      <obj_property name="ObjectShortName">aluop[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/c" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c</obj_property>
+      <obj_property name="ObjectShortName">c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/v" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">v</obj_property>
+      <obj_property name="ObjectShortName">v</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">n</obj_property>
+      <obj_property name="ObjectShortName">n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/z" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">z</obj_property>
+      <obj_property name="ObjectShortName">z</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider82" type="divider">
+      <obj_property name="label">Data Memory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/datamemaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">datamemaddr[10:2]</obj_property>
+      <obj_property name="ObjectShortName">datamemaddr[10:2]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/datamemwrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">datamemwrite</obj_property>
+      <obj_property name="ObjectShortName">datamemwrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/datamemdatain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">datamemdatain[31:0]</obj_property>
+      <obj_property name="ObjectShortName">datamemdatain[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/datamemdataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">datamemdataout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">datamemdataout[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider87" type="divider">
+      <obj_property name="label">Code  Memory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/codememaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">codememaddr[9:2]</obj_property>
+      <obj_property name="ObjectShortName">codememaddr[9:2]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/codememdataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">codememdataout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">codememdataout[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider90" type="divider">
+      <obj_property name="label">Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/regasource" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">regasource</obj_property>
+      <obj_property name="ObjectShortName">regasource</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/regawrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regawrite</obj_property>
+      <obj_property name="ObjectShortName">regawrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/regaaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regaaddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">regaaddr[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/regadatain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regadatain[31:0]</obj_property>
+      <obj_property name="ObjectShortName">regadatain[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/regbaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbaddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">regbaddr[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/regbdataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbdataout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">regbdataout[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/regcaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcaddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">regcaddr[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/regcdataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcdataout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">regcdataout[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus132" type="vbus" db_ref_id="1">
+      <obj_property name="label">Reg Subset</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[1]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[2]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[3]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbank1[0:31]</obj_property>
+      <obj_property name="ObjectShortName">regbank1[0:31]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[1]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[2]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[3]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[4]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[5]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[6]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[7]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[8]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[9]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[10]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[11]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[12]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[13]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[14]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[15]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[15]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[16]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[16]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[17]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[17]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[18]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[18]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[19]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[19]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[20]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[20]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[21]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[21]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[22]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[22]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[22]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[23]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[23]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[23]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[24]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[24]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[24]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[25]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[25]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[25]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[26]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[26]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[26]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[27]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[27]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[27]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[28]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[28]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[28]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[29]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[29]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[29]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[30]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[30]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cputestbench/theCPU/registerBank/regbank1[31]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">regbank1[31]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider137" type="divider">
+      <obj_property name="label">Control</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/theController/cpustate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">cpustate</obj_property>
+      <obj_property name="ObjectShortName">cpustate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cputestbench/theCPU/theController/nextcpustate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextcpustate</obj_property>
+      <obj_property name="ObjectShortName">nextcpustate</obj_property>
+   </wvobject>
+</wave_config>
