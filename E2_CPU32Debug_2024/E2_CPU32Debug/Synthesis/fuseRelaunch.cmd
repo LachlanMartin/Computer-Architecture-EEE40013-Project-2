@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpuTestbench_isim_beh.exe" -prj "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpuTestbench_beh.prj" "work.cpuTestbench" 

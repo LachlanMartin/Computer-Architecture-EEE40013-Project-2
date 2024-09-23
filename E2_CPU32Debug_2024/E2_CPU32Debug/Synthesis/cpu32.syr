@@ -1,0 +1,683 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Reading design: cpu32.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cpu32.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cpu32"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : cpu32
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/MultiplierDummy5Cycle/MultiplierDummy5Cycle.vhd" into library work
+Parsing entity <Multiplier5Cycle>.
+Parsing architecture <Behavioral> of entity <multiplier5cycle>.
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/CPUPackage.vhd" into library work
+Parsing package <cpupackage>.
+Parsing package body <cpupackage>.
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/Registers.vhd" into library work
+Parsing entity <Registers>.
+Parsing architecture <DistributedRAM> of entity <registers>.
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/DataMemory.vhd" into library work
+Parsing entity <DataMemory>.
+Parsing architecture <RTL> of entity <datamemory>.
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/Control.vhd" into library work
+Parsing entity <Control>.
+Parsing architecture <Behavioral> of entity <control>.
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/CodeMemory.vhd" into library work
+Parsing entity <CodeMemory>.
+Parsing architecture <RTL> of entity <codememory>.
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/ALU.vhd" into library work
+Parsing entity <alu>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/CPU32.vhd" into library work
+Parsing entity <cpu32>.
+Parsing architecture <Behavioral> of entity <cpu32>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <cpu32> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CodeMemory> (architecture <RTL>) with generics from library <work>.
+Note: "Memory file opened OK - "codememory.mif""
+
+Elaborating entity <Registers> (architecture <DistributedRAM>) with generics from library <work>.
+
+Elaborating entity <alu> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Multiplier5Cycle> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/ALU.vhd" Line 80. Case statement is complete. others clause is never selected
+
+Elaborating entity <DataMemory> (architecture <RTL>) with generics from library <work>.
+
+Elaborating entity <Control> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/Control.vhd" Line 126. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <cpu32>.
+    Related source file is "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/CPU32.vhd".
+WARNING:Xst:647 - Input <pinIn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <pcOut>.
+    Found 32-bit adder for signal <pc[31]_branchOffset[31]_add_4_OUT> created at line 108.
+    Found 32-bit adder for signal <pc[31]_GND_5_o_add_5_OUT> created at line 1241.
+    Found 32-bit 3-to-1 multiplexer for signal <PCSource[1]_X_5_o_wide_mux_6_OUT> created at line 107.
+    Found 32-bit 3-to-1 multiplexer for signal <regADataIn> created at line 150.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <cpu32> synthesized.
+
+Synthesizing Unit <CodeMemory>.
+    Related source file is "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/CodeMemory.vhd".
+        dataWidth = 32
+        addressWidth = 8
+        objectFileName = "codememory.mif"
+    Found 32-bit register for signal <dout>.
+    Found 256x32-bit Read Only RAM for signal <addr[7]_GND_8_o_wide_mux_0_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <CodeMemory> synthesized.
+
+Synthesizing Unit <Registers>.
+    Related source file is "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/Registers.vhd".
+        dataWidth = 32
+        addressWidth = 5
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32x32-bit dual-port RAM <Mram_regBank1> for signal <regBank1>.
+    Found 32x32-bit dual-port RAM <Mram_regBank2> for signal <regBank2>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <Registers> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/ALU.vhd".
+    Found 1-bit register for signal <Z>.
+    Found 1-bit register for signal <N>.
+    Found 1-bit register for signal <V>.
+    Found 1-bit register for signal <C>.
+    Found 33-bit adder for signal <GND_10_o_GND_10_o_add_0_OUT> created at line 58.
+    Found 33-bit subtractor for signal <GND_10_o_GND_10_o_sub_2_OUT<32:0>> created at line 62.
+    Found 33-bit 8-to-1 multiplexer for signal <aluOutputx> created at line 56.
+WARNING:Xst:737 - Found 1-bit latch for signal <multStart>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred  10 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <Multiplier5Cycle>.
+    Related source file is "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/MultiplierDummy5Cycle/MultiplierDummy5Cycle.vhd".
+    Found 1-bit register for signal <Complete>.
+    Found 32-bit register for signal <Q>.
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | Clock (rising_edge)                            |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idlestate                                      |
+    | Power Up State     | idlestate                                      |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16x16-bit multiplier for signal <A[15]_B[15]_MuLt_2_OUT> created at line 53.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <Multiplier5Cycle> synthesized.
+
+Synthesizing Unit <DataMemory>.
+    Related source file is "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/DataMemory.vhd".
+        dataWidth = 32
+        addressWidth = 9
+    Found 512x32-bit single-port RAM <Mram_mem> for signal <mem>.
+    Found 32-bit register for signal <dout>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <DataMemory> synthesized.
+
+Synthesizing Unit <Control>.
+    Related source file is "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Source/Control.vhd".
+WARNING:Xst:647 - Input <ir<20:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ir<28:27>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 3-bit register for signal <cpuState>.
+    Found finite state machine <FSM_1> for signal <cpuState>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clock (rising_edge)                            |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | fetch                                          |
+    | Power Up State     | fetch                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit 8-to-1 multiplexer for signal <ir[26]_C_Mux_3_o> created at line 117.
+    Found 1-bit 4-to-1 multiplexer for signal <regAWrite> created at line 156.
+    Summary:
+	inferred  26 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Control> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x32-bit single-port Read Only RAM                  : 1
+ 32x32-bit dual-port RAM                               : 2
+ 512x32-bit single-port RAM                            : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 33-bit addsub                                         : 1
+# Registers                                            : 9
+ 1-bit register                                        : 5
+ 32-bit register                                       : 4
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Multiplexers                                         : 46
+ 1-bit 2-to-1 multiplexer                              : 18
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 12
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 32-bit 3-to-1 multiplexer                             : 1
+ 33-bit 2-to-1 multiplexer                             : 6
+ 5-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
+ 32-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CodeMemory>.
+INFO:Xst:3226 - The RAM <Mram_addr[7]_GND_8_o_wide_mux_0_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <dout>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     enA            | connected to signal <en>            | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <CodeMemory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DataMemory>.
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <dout>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 32-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <din>           |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <DataMemory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cpu32>.
+The following registers are absorbed into accumulator <pc>: 1 register on signal <pc>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <registerBank/Mram_regBank2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     weA            | connected to signal <registerBank/internalWriteA> | high     |
+    |     addrA          | connected to signal <regAAddr>      |          |
+    |     diA            | connected to signal <regADataIn>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <regCAddr>      |          |
+    |     doB            | connected to signal <regCDataOut>   |          |
+    -----------------------------------------------------------------------
+Unit <cpu32> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x32-bit single-port block Read Only RAM            : 1
+ 32x32-bit dual-port distributed RAM                   : 2
+ 512x32-bit single-port block RAM                      : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 33-bit addsub                                         : 1
+# Accumulators                                         : 1
+ 32-bit up loadable accumulator                        : 1
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+# Multiplexers                                         : 43
+ 1-bit 2-to-1 multiplexer                              : 17
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 12
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 32-bit 3-to-1 multiplexer                             : 1
+ 33-bit 2-to-1 multiplexer                             : 6
+ 5-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <theALU/MultiplierInstance/FSM_0> on signal <state[1:3]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ idlestate | 000
+ dummy1    | 001
+ dummy2    | 010
+ dummy3    | 011
+ dummy4    | 100
+-----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <theController/FSM_1> on signal <cpuState[1:3]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ fetch     | 000
+ decode    | 001
+ execute   | 010
+ dataread  | 011
+ datawrite | 100
+-----------------------
+
+Optimizing unit <cpu32> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <Multiplier5Cycle> ...
+
+Optimizing unit <Control> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cpu32, actual ratio is 7.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 75
+ Flip-Flops                                            : 75
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : cpu32.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 635
+#      GND                         : 1
+#      LUT2                        : 10
+#      LUT3                        : 20
+#      LUT4                        : 7
+#      LUT5                        : 168
+#      LUT6                        : 285
+#      MUXCY                       : 63
+#      MUXF7                       : 15
+#      VCC                         : 1
+#      XORCY                       : 65
+# FlipFlops/Latches                : 76
+#      FDC                         : 6
+#      FDCE                        : 69
+#      LD                          : 1
+# RAMS                             : 16
+#      RAM32M                      : 10
+#      RAM32X1D                    : 4
+#      RAMB16BWER                  : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 65
+#      IBUF                        : 1
+#      OBUF                        : 64
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              76  out of  11440     0%  
+ Number of Slice LUTs:                  538  out of   5720     9%  
+    Number used as Logic:               490  out of   5720     8%  
+    Number used as Memory:               48  out of   1440     3%  
+       Number used as RAM:               48
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    571
+   Number with an unused Flip Flop:     495  out of    571    86%  
+   Number with an unused LUT:            33  out of    571     5%  
+   Number of fully used LUT-FF pairs:    43  out of    571     7%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          82
+ Number of bonded IOBs:                  66  out of    102    64%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------+--------------------------+-------+
+Clock Signal                                             | Clock buffer(FF name)    | Load  |
+---------------------------------------------------------+--------------------------+-------+
+clock                                                    | BUFGP                    | 91    |
+theALU/Mmux_aluOutputx7110(theALU/Mmux_aluOutputx71101:O)| NONE(*)(theALU/multStart)| 1     |
+---------------------------------------------------------+--------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.810ns (Maximum Frequency: 101.940MHz)
+   Minimum input arrival time before clock: 3.364ns
+   Maximum output required time after clock: 3.847ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 9.810ns (frequency: 101.940MHz)
+  Total number of paths / destination ports: 207919 / 366
+-------------------------------------------------------------------------
+Delay:               9.810ns (Levels of Logic = 7)
+  Source:            codeMem/Mram_addr[7]_GND_8_o_wide_mux_0_OUT (RAM)
+  Destination:       theALU/Z (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: codeMem/Mram_addr[7]_GND_8_o_wide_mux_0_OUT to theALU/Z
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA31  113   1.850   2.016  codeMem/Mram_addr[7]_GND_8_o_wide_mux_0_OUT (codeMemDataOut<31>)
+     LUT5:I3->O           17   0.203   1.027  Mmux_regCAddr41 (regCAddr<3>)
+     RAM32X1D:DPRA3->DPO    3   0.205   0.651  registerBank/Mram_regBank262 (regCDataOut<31>)
+     LUT6:I5->O            4   0.205   0.684  Mmux_aluOperand2251 (aluOperand2<31>)
+     LUT5:I4->O            1   0.205   0.684  theALU/Mmux_aluOutputx7252 (theALU/Mmux_aluOutputx7251)
+     LUT5:I3->O            4   0.203   0.684  theALU/Mmux_aluOutputx7253 (aluDataOut<31>)
+     LUT6:I5->O            1   0.205   0.684  theALU/tempZ<31>6_SW0 (N231)
+     LUT6:I4->O            1   0.203   0.000  theALU/tempZ<31>7 (theALU/tempZ)
+     FDCE:D                    0.102          theALU/Z
+    ----------------------------------------
+    Total                      9.810ns (3.381ns logic, 6.429ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 75 / 75
+-------------------------------------------------------------------------
+Offset:              3.364ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       pc_0 (FF)
+  Destination Clock: clock rising
+
+  Data Path: reset to pc_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            75   1.222   1.712  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.430          pc_0
+    ----------------------------------------
+    Total                      3.364ns (1.652ns logic, 1.712ns route)
+                                       (49.1% logic, 50.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              3.847ns (Levels of Logic = 1)
+  Source:            pc_12 (FF)
+  Destination:       pcOut<12> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: pc_12 to pcOut<12>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.447   0.829  pc_12 (pc_12)
+     OBUF:I->O                 2.571          pcOut_12_OBUF (pcOut<12>)
+    ----------------------------------------
+    Total                      3.847ns (3.018ns logic, 0.829ns route)
+                                       (78.5% logic, 21.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+clock                     |    9.810|         |         |         |
+theALU/Mmux_aluOutputx7110|         |    2.323|         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock theALU/Mmux_aluOutputx7110
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    4.106|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 14.85 secs
+ 
+--> 
+
+
+Total memory usage is 376368 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

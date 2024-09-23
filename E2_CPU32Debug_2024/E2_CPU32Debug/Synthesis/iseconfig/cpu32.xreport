@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-08-28T15:15:39</DateModified>
+  <DateModified>2024-09-23T15:23:27</DateModified>
   <ModuleName>cpu32</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/peter/Documents/Work/EEE40013_20_S2/Laboratory/E2_CPU32Debug/Synthesis/iseconfig/cpu32.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/peter/Documents/Work/EEE40013_20_S2/Laboratory/E2_CPU32Debug/Synthesis/</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2024-09-23T15:16:47</SummaryTimeStamp>
+  <SavedFilePath>/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/iseconfig/cpu32.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/</ImplementationReportsDirectory>
   <DateInitialized>2020-08-17T11:54:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
