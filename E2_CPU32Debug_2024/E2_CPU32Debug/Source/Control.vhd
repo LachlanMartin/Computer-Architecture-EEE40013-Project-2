@@ -22,6 +22,8 @@ entity Control is
            regAWrite    : out std_logic;
            RegASource   : out RegASourceT; 
 
+           doFlags      : out std_logic;
+
            loadPC       : out std_logic;
            loadIR       : out std_logic;
            writeEn      : out std_logic;
@@ -144,6 +146,7 @@ begin
       nextCpuState  <= fetch;
 
       irOp := ir_op(ir); -- extract opcode field
+      doFlags <= '0';
 
       case cpuState is
 
@@ -188,6 +191,7 @@ begin
                when "000" | "001" =>  -- Ra <- Rb op Rc, Ra <- Rb op sex(immed)
                   regAWrite    <= '1';            
                   nextCpuState <= fetch;
+                  doFlags <= '1';
                when "010" =>              
                   if (ir_regA(ir) /= "00000") then  -- Ra <- mem(Rb + sex(immed))
                      nextCpuState <= dataRead;
