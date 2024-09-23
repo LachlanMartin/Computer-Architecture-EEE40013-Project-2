@@ -174,6 +174,8 @@ begin
                   elsif (ir_branchCondition(ir) = "0001") then  -- PC <- PC + offset; Reg31 <- PC;
                      loadPC       <= '1';
                      PCSource     <= branchPC;
+                     RegASource   <= reg31;
+                     regAWrite    <= '1';
                   else                                      -- if (cond) PC <- PC + offset
                      if (doBranch( Z, N, V, C, ir)) then
                         loadPC    <= '1';
