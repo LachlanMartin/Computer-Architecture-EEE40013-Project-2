@@ -1,0 +1,57 @@
+00000000 |                             org     0x0000              
+00000000 |                 
+00000000 |                 ; Tutorial Example
+00000000 | 20200033                    mov     r1,#0x33            
+00000004 | 20400052                    mov     r2,#0x52            
+00000008 | 00620800                    add     r3,r2,r1            
+0000000c | 08620800                    and     r3,r2,r1            
+00000010 | 0C620800                    or      r3,r2,r1            
+00000014 | 2462000C                    add     r3,r2,#-12          ; Becomes sub r3,r2,#12
+00000018 |                 
+00000018 |                 ; Example 1- Check basic addition
+00000018 |                 ;         mov   R1,#100
+00000018 |                 ;         mov   R2,#200
+00000018 |                 ;         add   R3,R1,R2
+00000018 |                 ;incLoop1
+00000018 |                 ;         bra   incLoop1
+00000018 |                 ;       
+00000018 |                 ; Example 2 - Counting loop
+00000018 |                 ;  Just a dummy loop to execute
+00000018 |                 ;  R1 should be counting
+00000018 |                 
+00000018 |                 ;         mov   R1,#0
+00000018 |                 ;         mov   R2,#1
+00000018 |                 ;incLoop2
+00000018 |                 ;         add   R1,R1,R2
+00000018 |                 ;         bra   incLoop2
+00000018 |                 ;         
+00000018 |                 ; Example 2 - Check BEQ
+00000018 |                 ;         mov   R1,#0x33 ;  <==> add r1,r0,#0x33
+00000018 |                 ;         mov   R2,#0x33
+00000018 |                 ;         sub   R1,R1,R2
+00000018 |                 ;         beq   ok1
+00000018 |                 ;  
+00000018 |                 ; End up here on error
+00000018 |                 ;fail1    bra   *
+00000018 |                 ;         mov   R0,R0
+00000018 |                 ;         mov   R0,R0
+00000018 |                 ;         mov   R0,R0
+00000018 |                 ;         
+00000018 |                 ; End up here on success
+00000018 |                 ; Can chain tests
+00000018 |                 ;ok1      bra   *
+00000018 |                 ;         mov   R0,R0
+00000018 |                 ;         mov   R0,R0
+00000018 |                 ;         mov   R0,R0
+
+
+0 Errors detected in pass 1
+0 Warnings detected in pass 1
+0 Errors detected in pass 2
+0 Warnings detected in pass 2
+
+
+  Symbol Table
+*******************************************************
+  Value  : Type  : Symbol 
+*******************************************************
