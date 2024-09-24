@@ -187,7 +187,7 @@ begin
 
    begin
 
-      if (ir_op(ir) = "000") then
+      if (ir_op(ir) = "000") or (ir_op(ir) = "001") then
          aluOp  <= ir_aluOp(ir);
       else
          aluOp  <= ALUopAdd; -- add for all other opcodes
