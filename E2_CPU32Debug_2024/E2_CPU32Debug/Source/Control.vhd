@@ -129,6 +129,7 @@ begin
 
    -- Needed for use in case statements
    variable irOp : std_logic_vector(2 downto 0);
+   variable irAluOp : std_logic_vector(2 downto 0);
 
    begin
       -- Default control signal values inactive
@@ -146,6 +147,7 @@ begin
       nextCpuState  <= fetch;
 
       irOp := ir_op(ir); -- extract opcode field
+      irAluOp := ir_aluOp(ir); -- extract aluOpCode field
       doFlags <= '0';
 
       case cpuState is
@@ -191,7 +193,9 @@ begin
                when "000" | "001" =>  -- Ra <- Rb op Rc, Ra <- Rb op sex(immed)
                   regAWrite    <= '1';            
                   nextCpuState <= fetch;
-                  doFlags <= '1';
+                  if irAluOp /= "101" and irAluOp /= "110" then -- swap and --- should not update the ALU Flags
+                     doFlags <= '1';   
+                  end if;
                when "010" =>              
                   if (ir_regA(ir) /= "00000") then  -- Ra <- mem(Rb + sex(immed))
                      nextCpuState <= dataRead;
