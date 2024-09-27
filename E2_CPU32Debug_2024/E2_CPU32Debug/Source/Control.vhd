@@ -27,7 +27,10 @@ entity Control is
            loadPC       : out std_logic;
            loadIR       : out std_logic;
            writeEn      : out std_logic;
-           PCSource     : out PCSourceT
+           PCSource     : out PCSourceT;
+
+           aluStart : out std_logic;
+           aluComplete : in std_logic
            );
 end entity Control;
 
@@ -95,7 +98,7 @@ begin
    -- Control signals
    --
    combinational:
-   process ( cpuState, ir, Z,N,V,C )
+   process ( cpuState, ir, Z,N,V,C, aluComplete )
 
    --************************************************************************
    -- Determines if a conditional branch is taken
@@ -150,6 +153,8 @@ begin
       irAluOp := ir_aluOp(ir); -- extract aluOpCode field
       doFlags <= '0';
 
+      aluStart <= '0';
+
       case cpuState is
 
          when fetch => -- load next word into instruction register
@@ -161,8 +166,10 @@ begin
             case irOp is
                when "000" =>                                -- Ra <- Rb op Rc
                   nextCpuState <= execute;
+                  aluStart <= '1';
                when "001" =>                                -- Ra <- Rb op sex(immed)
                   nextCpuState <= execute;
+                  aluStart <= '1';
                when "010" =>                                -- Ra <- mem(Rb + sex(immed))
                                                             -- PC <- Rb op sex(immed)
                   nextCpuState <= execute;
@@ -195,8 +202,8 @@ begin
                when "000" | "001" =>  -- Ra <- Rb op Rc, Ra <- Rb op sex(immed)
                   regAWrite    <= '1';            
                   nextCpuState <= fetch;
-                  if irAluOp /= "101" and irAluOp /= "110" then -- swap and --- should not update the ALU Flags
-                     doFlags <= '1';   
+                  if irAluOp /= "101" and irAluOp /= "110" then -- swap and ROR should not update the ALU Flags
+                     doFlags <= '1';
                   end if;
                when "010" =>              
                   if (ir_regA(ir) /= "00000") then  -- Ra <- mem(Rb + sex(immed))

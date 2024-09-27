@@ -1,0 +1,45 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpuTestbench_isim_beh.exe -prj /mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpuTestbench_beh.prj work.cpuTestbench 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../../../MultiplierDummy5Cycle/MultiplierDummy5Cycle.vhd" into library work
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/Debug.vhd" into library work
+WARNING:HDLCompiler:797 - "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/Debug.vhd" Line 73: Subprogram <dwrite> does not conform with its declaration.
+WARNING:HDLCompiler:797 - "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/Debug.vhd" Line 95: Subprogram <dwrite> does not conform with its declaration.
+WARNING:HDLCompiler:797 - "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/Debug.vhd" Line 120: Subprogram <dwrite> does not conform with its declaration.
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/CPUPackage.vhd" into library work
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/Registers.vhd" into library work
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/DataMemory.vhd" into library work
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/Control.vhd" into library work
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/CodeMemory.vhd" into library work
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/ALU.vhd" into library work
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/CPU32.vhd" into library work
+Parsing VHDL file "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/CPU32Testbench.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1242 - "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/../Source/CodeMemory.vhd" Line 61: Note: "Memory file opened OK - "codememory.mif""
+Completed static elaboration
+Fuse Memory Usage: 86676 KB
+Fuse CPU Usage: 2040 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package cpupackage
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package debug
+Compiling architecture rtl of entity CodeMemory [\CodeMemory(32,8,"codememory.mif...]
+Compiling architecture distributedram of entity Registers [\Registers(32,5)\]
+Compiling architecture behavioral of entity Multiplier5Cycle [multiplier5cycle_default]
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture rtl of entity DataMemory [\DataMemory(32,9)\]
+Compiling architecture behavioral of entity Control [control_default]
+Compiling architecture behavioral of entity cpu32 [cpu32_default]
+Compiling architecture behavior of entity cputestbench
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 22 VHDL Units
+Built simulation executable /mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpuTestbench_isim_beh.exe
+Fuse Memory Usage: 2239672 KB
+Fuse CPU Usage: 2240 ms
+GCC CPU Usage: 3600 ms

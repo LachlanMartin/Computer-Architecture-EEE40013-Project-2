@@ -33,7 +33,9 @@ signal aluOperand1          : unsigned(31 downto 0);
 signal aluOperand2          : unsigned(31 downto 0);
 signal aluDataOut           : unsigned(31 downto 0);
 signal Z,N,V,C              : std_logic;
-signal doFlags             : std_logic;
+signal doFlags              : std_logic;
+signal aluStart   			 : std_logic;
+signal aluComplete 			 : std_logic;
 
 -- Instruction register
 signal ir                  : std_logic_vector(31 downto 0);
@@ -139,7 +141,7 @@ begin
    -- Register File control
    --
    regControl:
-   process (ir, RegASource, aluDataOut, dataInBus)
+   process (ir, RegASource, aluDataOut, dataInBus, pc)
    begin
       regAAddr   <= ir_regA(ir);
       regBAddr   <= ir_regB(ir);
@@ -148,8 +150,8 @@ begin
       case RegASource is
          when aluOut      => regADataIn <= std_logic_vector(aluDataOut);
          when dataMemOut  => regADataIn <= dataInBus;
-         when reg31       =>  regAAddr <= "11111";
-                              regADataIn <= pc;
+         when reg31       =>  regAAddr <= "11111"; --R31
+                              regADataIn <= pc; --Program Counter
       end case;
 
    end process regControl;
@@ -206,7 +208,7 @@ begin
       if (ir_op(ir) = "000") then
          aluOperand2  <= unsigned(regCDataOut);
       elsif (ir_op(ir) = "001") then
-         if (ir_aluOp(ir) = "100") then
+         if ir_aluOp(ir) = ALUopEor then
             aluOperand2  <= signedImmediateValue;
          else
             aluOperand2  <= unsignedImmediateValue;
@@ -234,7 +236,9 @@ begin
          C         => C,
          clock     => clock,
          reset     => reset,
-         doFlags   => doFlags
+         doFlags   => doFlags,
+         aluComplete => aluComplete,
+         aluStart => aluStart
          );
 
    --================================================
@@ -287,7 +291,9 @@ begin
          loadIR       => loadIR,
          writeEn      => writeEn,
          PCSource     => PCSource,
-         doFlags      => doFlags
+         doFlags      => doFlags,
+         aluStart 	 => aluStart,
+			aluComplete  => aluComplete
          );
 
 end architecture Behavioral;

@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpu32.xst" -ofn "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpu32.syr" 
+xst -intstyle ise -ifn "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpu32.xst" -ofn "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpu32.syr" 
+xst -intstyle ise -ifn "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpu32.xst" -ofn "/mnt/c/Users/aligo/Desktop/Developer/EEE40013-Project-2/E2_CPU32Debug_2024/E2_CPU32Debug/Synthesis/cpu32.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 cpu32.ngc cpu32.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cpu32_map.ncd cpu32.ngd cpu32.pcf 
+par -w -intstyle ise -ol high -mt off cpu32_map.ncd cpu32.ncd cpu32.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cpu32.twx cpu32.ncd -o cpu32.twr cpu32.pcf 
