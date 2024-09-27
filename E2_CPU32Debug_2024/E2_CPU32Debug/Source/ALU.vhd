@@ -54,6 +54,7 @@ begin
 
     tempV <= '0';
     aluComplete <= '1';
+    multStart <= '0';
 	
     case aluOp is
         when ALUopAdd =>

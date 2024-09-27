@@ -200,10 +200,14 @@ begin
          when execute =>
             case irOp is
                when "000" | "001" =>  -- Ra <- Rb op Rc, Ra <- Rb op sex(immed)
-                  regAWrite    <= '1';            
-                  nextCpuState <= fetch;
-                  if irAluOp /= "101" and irAluOp /= "110" then -- swap and ROR should not update the ALU Flags
-                     doFlags <= '1';
+                  if aluComplete = '1' then
+                     regAWrite    <= '1';            
+                     nextCpuState <= fetch;
+                     if irAluOp /= "101" and irAluOp /= "110" then -- swap and ROR should not update the ALU Flags
+                        doFlags <= '1';
+                     end if;
+                  else
+                     nextCpuState <= execute;
                   end if;
                when "010" =>              
                   if (ir_regA(ir) /= "00000") then  -- Ra <- mem(Rb + sex(immed))
