@@ -75,7 +75,7 @@ end process ALUProcess;
 
 -- New clocked process to update flags
 FlagUpdateProcess:
-process (clock, reset)
+process (clock, reset, doFlags)
 begin
     if reset = '1' then
         Z <= '0';
