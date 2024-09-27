@@ -35,7 +35,7 @@ begin
 ALUProcess:
 process (aluOp, operand1, operand2, aluOutputx)
 begin
-    V <= '0';
+    tempV <= '0';
 
     case aluOp is
         when ALUopAdd =>
