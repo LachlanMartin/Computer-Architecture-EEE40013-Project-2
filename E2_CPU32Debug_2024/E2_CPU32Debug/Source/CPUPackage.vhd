@@ -69,7 +69,7 @@ function zeroExtend ( constant toWidth : in integer;
 type   PCSourceT is (branchPC, nextPC, jumpPC); 
 
 -- Type for Register write port source control
-type   RegASourceT is (aluOut,dataMemOut); 
+type   RegASourceT is (aluOut,dataMemOut,reg31); 
 
 end package cpupackage;
 
